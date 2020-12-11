@@ -1,11 +1,20 @@
 Package: calcDOsat
-Type: Package
-Title: Solubility Equations for Oxygen in Water
-Version: 0.1.1
-Author: Pieter J. K. Aukes
-Maintainer: PJKA <paukes@uwaterloo.ca>
+Title: What the Package Does (One Line, Title Case)
+Version: 0.2.0
+Authors@R: 
+    c(person(given = "Pieter",
+           family = "Aukes",
+           role = c("aut", "cre"),
+           email = "paukes@uwaterloo.ca",
+           comment = c(ORCID = "0000-0003-0759-2187")),
+    person(given = "Jason",
+           family = "Venkiteswaran",
+           role = c("aut"),,
+           email = "jvenktieswaran@wlu.ca",
+           comment = c(ORCID = "0000-0002-6574-7071")))
 Description: This function allows you to calculate dissolved oxygen from USGS Technical Memorandum 2011.03. Input a dataframe with the measured dissolved oxygen concentration (mg/L), water temperature (C), atmospheric pressure (kPa), and specific conductance (optional; uS/cm) and choose from 3 methods (Weiss, Benson-Krause, or Garcia-Gordon) to calculate your DO as a %-saturation.
-License: MIT License
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
