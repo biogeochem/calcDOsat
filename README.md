@@ -1,2 +1,37 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # calcDOsat
-This package will calculate dissolved oxygen saturation given water temperature, barometric pressure, and dissolved oxygen concentration. Solubility equations for oxygen in water are taken from the USGS Technical Memorandum 2011.03.
+
+<!-- badges: start -->
+
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+<!-- badges: end -->
+
+This package will calculate dissolved oxygen saturation given water
+temperature, barometric pressure, and dissolved oxygen concentration.
+Solubility equations for oxygen in water are taken from the USGS
+Technical Memorandum 2011.03.
+
+## Installation
+
+``` r
+# install.packages("devtools")
+devtools::install_github("biogeochem/calcDOsat")
+```
+
+## Example
+
+Add the DO saturation percent the `data.frame` of field or lab data with
+the `'weiss'`, `'benson_krause'` or `'garcia_gordon'` methods:
+
+``` r
+library(calcDOsat)
+
+# create example data
+dat <- data.frame(Temp_C = 20, Baro_kPa = 101.325, Spec_Cond_uS.cm = 0, DO_mg.L = 8)
+
+# add calculated DO saturation percent
+dat <- calcDOsat(dat, 'weiss', 'Temp_C', 'Baro_kPa', 'Spec_Cond_uS.cm', 'DO_mg.L')
+```

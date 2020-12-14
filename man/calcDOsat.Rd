@@ -4,27 +4,27 @@
 \alias{calcDOsat}
 \title{Solubility Equations for Oxygen in Water}
 \usage{
-calcDOsat(df, method, water_temp_C, baro_P_kPa, spec_cond_uS.cm,
-  meas_do_mg.L)
+calcDOsat(dat, method, water_temp_C, baro_P_kPa, spec_cond_uS.cm, meas_do_mg.L)
 }
 \arguments{
-\item{df}{dataframe with your values}
+\item{dat}{dataframe with your values}
 
 \item{method}{choose from either Weiss ('weiss'), Benson-Krause ('benson_krause'), or Garcia-Gordon ('garcia_gordon')}
 
 \item{water_temp_C}{column name with sample water temperature in C}
 
+\item{baro_P_kPa}{column name with atmospheric pressure at time of sampling}
+
 \item{spec_cond_uS.cm}{column name with sample specific conductance in uS/cm}
 
 \item{meas_do_mg.L}{column name with sample water dissolved oxygen value in mg/L}
-
-\item{baro_P_kpa}{column name with atmospheric pressure at time of sampling}
 }
 \description{
 This function allows you to calculate dissolved oxygen from USGS Technical Memorandum 2011.03
 }
 \examples{
-calcDOsat(do_test, 'weiss', 'Temp_C', 'Baro_kPa', 'Spec_Cond_uS.cm', 'DO_mg.L')
+dat <- data.frame(Temp_C = 20, Baro_kPa = 101.325, Spec_Cond_uS.cm = 0, DO_mg.L = 8)
+calcDOsat(dat, 'weiss', 'Temp_C', 'Baro_kPa', 'Spec_Cond_uS.cm', 'DO_mg.L')
 }
 \keyword{USGS,}
 \keyword{dissolved}
