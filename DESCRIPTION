@@ -1,6 +1,6 @@
 Package: calcDOsat
-Title: What the Package Does (One Line, Title Case)
-Version: 0.2.0
+Title: Calculation of Dissolved Oxygen (DO) Saturation in Water from DO Concentration and Water Temperature
+Version: 0.2.1
 Authors@R: 
     c(person(given = "Pieter",
            family = "Aukes",
